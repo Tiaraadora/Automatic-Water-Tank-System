@@ -40,8 +40,10 @@ This system requires configuration of the Wi-Fi name (SSID) and its password, as
 <img src="FlowChartFlowup.png" alt="Gambar Sistem Tangki Air" width="500">
 
 ## The Mobile App Screen
-<img src="Mobilescreen.png" alt="Gambar Sistem Tangki Air">
-Includes:
+<img src="Mobilescreen.png" alt="Gambar Sistem Tangki Air" width="500">
+
+**Includes:**
+
 - Water Level (% of Tank)
 - Pump Status (On/Off)
 - Flow Rate (L/min)
