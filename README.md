@@ -40,7 +40,7 @@ This system requires configuration of the Wi-Fi name (SSID) and its password, as
 <img src="FlowChartFlowup.png" alt="Gambar Sistem Tangki Air" width="500">
 
 ## The Mobile App Screen
-<img src="Mobilescreen.png" alt="Gambar Sistem Tangki Air" width="500">
+<img src="Mobilescreen.png" alt="Gambar Sistem Tangki Air" height="500">
 
 **Includes:**
 
