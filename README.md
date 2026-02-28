@@ -1,28 +1,54 @@
 # Automatic Water Tank System
 
-Sistem pemantauan dan kontrol otomatis untuk tangki air berbasis ESP32. Sistem ini memantau level air menggunakan sensor ultrasonik, mendeteksi aliran air menggunakan sensor water flow, dan terintegrasi secara real-time dengan Firebase.
+Automated water tank system that can detect when water is available and automatically store it in a household tank without any human intervention
 
-![Gambar Sistem Tangki Air](image.png)
+![Gambar Sistem Tangki Air](Flowupimage.png)
 
-## Deskripsi Singkat
-Sistem ini dirancang untuk secara cerdas mengontrol pengisian tangki air. Dengan membaca level air dan mendeteksi adanya aliran masuk, ESP32 dapat menyalakan pompa air pada jadwal tertentu atau mematikannya saat tangki sudah penuh. Jika pompa mendeteksi tidak ada aliran air dalam waktu tertentu (untuk mencegah pompa rusak/kering), sistem akan melakukan penghentian otomatis (auto-cutoff).
+## Brief Description
+In Indonesia, the distribution of water to households managed by PDAM remains inefficient in many regions, still facing numerous obstacles related to delivery and stability. This cause many areas experience on and off water flow, resulting in citizens having to manually test their taps to see if water is running, often in the middle of the night, making it even more inconvenient.
 
-## Fitur Utama
-- **Monitoring Level Air (Ultrasonik)**: Mengukur level jarak air dengan akurasi yang distabilkan (Moving Average Filter).
-- **Monitoring Laju Aliran Air (Water Flow Sensor)**: Memantau debit (L/menit) dan total akumulasi volume air yang masuk.
-- **IoT & Firebase**: Mengirim data level air, laju aliran air, volume, dan status pompa ke Firebase Realtime Database.
-- **Jadwal Operasional Pompa**: Waktu aktif pompa bisa dijadwalkan dan diatur (jam mulai dan selesai) melalui sinkronisasi waktu NTP dan pengaturan Firebase.
-- **LCD Display**: Menampilkan status koneksi, laju aliran (Flow), dan level air tangki (Tank %) secara langsung dengan LCD I2C (16x2).
+## Main Features
+- **Monitoring Water Level (Ultrasonic)**: Measure the distance level of water with stabilized accuracy (Moving Average Filter).
+- **Monitoring Water Flow Rate (Water Flow Sensor)**: Monitor the flow rate (L/minute) and total accumulated volume of water entering.
+- **IoT & Firebase**: Send water level, water flow rate, volume, and pump status data to Firebase Realtime Database.
+- **Pump Operational Schedule**: The pump's active time can be scheduled and adjusted (start and end times) through NTP time synchronization and Firebase settings.
+- **LCD Display**: Displays connection status, flow rate (Flow), and tank water level (Tank %) directly with LCD I2C (16x2).
 
 ## Hardware
 - ESP32
-- Sensor Ultrasonik (Trigger Pin: 13, Echo Pin: 12)
-- Sensor Saluran Air / Flow Meter (Pin: 25)
-- Relay (Relay Pompa: Pin 15, Relay Valve: Pin 23)
-- LCD I2C 16x2
+- YF-S201 Water Flow Sensor
+- 12V DC Straight Solenoid Automatic Water Valve
+- HC-SR04 Ultrasonic Sensor
+- 5V Relay (4-channel)
+- Extension Cord
+- 12V 5A Power Supply Adapter
+- Mini Breadboard
+- Jumper Wires
+- Aquarium Pump
+- 16x2 LCD I2C Display
+- Plug
+- Cables
+- Hose
 
-## Pengaturan Wi-Fi & Database
-Sistem ini memerlukan konfigurasi nama Wi-Fi (SSID) dan kata sandinya, serta URL Host Firebase dan rahasia otentikasi (Auth/Token) untuk operasional IoT. Konfigurasi ini dapat disesuaikan di dalam file `.ino` utama.
+## Wi-Fi & Database Settings
+This system requires configuration of the Wi-Fi name (SSID) and its password, as well as the Firebase Host URL and authentication secrets (Auth/Token) for IoT operations. This configuration can be adjusted within the main `.ino` file.
 
-# Initial Prototype Sketch
+## Initial Prototype Sketch
 <img src="PitchDeckFlowUp.png" alt="Gambar Sistem Tangki Air" width="500">
+
+## Prototype Software Logic
+<img src="FlowChartFlowup.png" alt="Gambar Sistem Tangki Air" width="500">
+
+## The Mobile App Screen
+<img src="Mobilescreen.png" alt="Gambar Sistem Tangki Air">
+Includes:
+- Water Level (% of Tank)
+- Pump Status (On/Off)
+- Flow Rate (L/min)
+- Tank Volume (L)
+- Pump Operating Schedule
+- Records previous operating times (History)
+- Real-Time Clock
+
+## Working Mechanism
+<img src="Tiara.png" alt="Gambar Sistem Tangki Air">
