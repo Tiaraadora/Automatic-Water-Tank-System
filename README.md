@@ -24,4 +24,5 @@ Sistem ini dirancang untuk secara cerdas mengontrol pengisian tangki air. Dengan
 ## Pengaturan Wi-Fi & Database
 Sistem ini memerlukan konfigurasi nama Wi-Fi (SSID) dan kata sandinya, serta URL Host Firebase dan rahasia otentikasi (Auth/Token) untuk operasional IoT. Konfigurasi ini dapat disesuaikan di dalam file `.ino` utama.
 
+# Initial Prototype Sketch
 <img src="PitchDeckFlowUp.png" alt="Gambar Sistem Tangki Air" width="500">
